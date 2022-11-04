@@ -1,5 +1,5 @@
 package com.project.webpages;
 
-public class Home {
+public class RegisterPage {
 
 }
