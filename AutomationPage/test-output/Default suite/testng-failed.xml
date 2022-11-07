@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.test.HomePageTest">
+      <class name="com.project.test.DatePickTest">
         <methods>
           <include name="initHomePage"/>
-          <include name="logoDisplayed"/>
           <include name="tearDownHomePage"/>
+          <include name="datesel"/>
         </methods>
-      </class> <!-- com.project.test.HomePageTest -->
+      </class> <!-- com.project.test.DatePickTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
