@@ -7,12 +7,14 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 
 import com.project.util.Common;
 
 public class BaseClass {
-	 public Properties prop;
+	 public static Properties prop;
 		FileInputStream ip;
 		 WebDriver driver;
 		public BaseClass()
@@ -30,6 +32,8 @@ public class BaseClass {
 			}
 		}
 		
+		
+					
 		public WebDriver initWebdriver()
 		{
 			if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
@@ -42,9 +46,13 @@ public class BaseClass {
 				 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Common.IMPLICITETIMEOUT));
 				 driver.get(prop.getProperty("url"));
 				
+				
 				 
 			}
 			 return driver;
+		}
+		public static void main(String[] args) {
+			
 		}
 
 }
