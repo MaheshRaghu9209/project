@@ -6,7 +6,7 @@
       <class name="com.project.test.RegisterPageTest">
         <methods>
           <include name="initHomePage"/>
-          <include name="Registration"/>
+          <include name="Registration" invocation-numbers="0"/>
           <include name="tearDownHomePage"/>
         </methods>
       </class> <!-- com.project.test.RegisterPageTest -->

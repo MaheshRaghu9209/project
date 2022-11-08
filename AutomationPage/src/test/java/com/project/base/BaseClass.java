@@ -19,7 +19,7 @@ public class BaseClass {
 		{
 			prop=new Properties();
 			try {
-				ip=new FileInputStream("C:\\Users\\Administrator\\git\\project12\\AutomationPage\\src\\test\\resources\\configuration\\config.properties");
+				ip=new FileInputStream("C:\\Users\\Savi\\git\\project\\AutomationPage\\src\\test\\resources\\configuration\\config.properties");
 				prop.load(ip);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -34,7 +34,7 @@ public class BaseClass {
 		{
 			if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
 			{
-				 System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Administrator\\\\git\\\\project12\\\\AutomationPage\\\\src\\\\test\\\\resources\\\\chromedriver.exe");
+				 System.setProperty("webdriver.chrome.driver","C:\\Users\\Savi\\git\\project\\AutomationPage\\src\\test\\resources\\chromedriver.exe");
 				 driver=new ChromeDriver();
 				 driver.manage().deleteAllCookies();
 				 driver.manage().window().maximize();

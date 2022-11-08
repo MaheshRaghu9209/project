@@ -10,11 +10,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Data {
 
-	public static String[][] getData() throws IOException
+	public static String[][] readingXls() throws IOException
 	{
 		String[][] s=new String[1][12];
 		
-		FileInputStream fi=new FileInputStream("C:\\Users\\Administrator\\git\\project1\\AutomationPage\\src\\test\\resources\\Data\\Project1.xlsx");
+		FileInputStream fi=new FileInputStream("C:\\Users\\Savi\\git\\project\\AutomationPage\\src\\test\\resources\\Data\\Project1.xlsx");
 		XSSFWorkbook wb=new XSSFWorkbook(fi);
 		XSSFSheet sheet = wb.getSheet("Project1");
 		XSSFRow row = sheet.getRow(0);

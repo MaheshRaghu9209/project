@@ -1,8 +1,14 @@
 package com.project.test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
@@ -40,9 +46,10 @@ public class RegisterPageTest extends BaseClass {
 		PageFactory.initElements(driver, RegisterPage.class).reg(a, b, c, d, e, f, g, h, i, j, k, l);
 	}
 	@DataProvider
-	public String[][] getData() throws IOException
+	public String[][] getData() throws IOException 
 	{
-		return Data.getData();
+		return Data.readingXls();
+
 	}
 	@AfterMethod
 	public void tearDownHomePage()
