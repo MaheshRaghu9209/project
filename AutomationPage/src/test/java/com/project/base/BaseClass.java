@@ -12,14 +12,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.project.util.Common;
 
 public class BaseClass {
-	 public Properties prop;
+	 public static Properties prop;
 		FileInputStream ip;
 		 WebDriver driver;
 		public BaseClass()
 		{
 			prop=new Properties();
 			try {
-				ip=new FileInputStream("C:\\Users\\user\\git\\project\\AutomationPage\\src\\test\\resources\\configuration\\config.properties");
+				ip=new FileInputStream("C:\\Users\\Administrator\\git\\project12\\AutomationPage\\src\\test\\resources\\configuration\\config.properties");
 				prop.load(ip);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -34,7 +34,7 @@ public class BaseClass {
 		{
 			if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
 			{
-				 System.setProperty("webdriver.chrome.driver","C:\\Users\\user\\git\\project\\AutomationPage\\src\\test\\resources\\chromedriver.exe");
+				 System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Administrator\\\\git\\\\project12\\\\AutomationPage\\\\src\\\\test\\\\resources\\\\chromedriver.exe");
 				 driver=new ChromeDriver();
 				 driver.manage().deleteAllCookies();
 				 driver.manage().window().maximize();
